@@ -66,7 +66,6 @@ console.log(`shit!`);
   // console.log(urlParams.toString()); // "?post=1234&action=edit"
   // console.log(urlParams.append('active', '1')); // "?post=1234&action=edit&active=1"
 
-  // USE QUERYSTRING IN FETCH AND POPULATE PAGE
   let searchData = urlParams.get(`search`);
   console.log(searchData);
   let searchUrl = `https://omdb-api.now.sh/?s=${searchData}`;
@@ -92,33 +91,6 @@ console.log(`shit!`);
           renderMovies();
 
   });
-
-  // FETCH PLOT INFO
-  // let searchData = urlParams.get(`search`);
-  // console.log(searchData);
-  // let searchUrl = `https://omdb-api.now.sh/?s=${searchData}`;
-  // let data;
-  // let currentMovie = {};
-  // fetch(searchUrl)
-  //     .then(response => response.json())
-  //     .then( (data) => {
-          
-  //         console.log(data.Search.length);
-  //         let results = data.Search;
-
-  //         for (const result in results) {
-  //           let currentMovie =
-  //           {
-  //             id: results[result].imdbID,
-  //             poster: results[result].Poster,
-  //             title: results[result].Title,
-  //             year: results[result].Year
-  //           };
-  //           movies.push(currentMovie);
-  //         };
-  //         renderMovies();
-
-  // });
   
   // python -m SimpleHTTPServer
   renderMovies();
